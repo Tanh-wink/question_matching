@@ -67,13 +67,13 @@ device: 选用什么设备进行训练，可选cpu或gpu。如使用gpu训练则
 
 如：
 
-checkpoints/
-├── model_10000
-│   ├── model_state.pdparams
-│   ├── tokenizer_config.json
-│   └── vocab.txt
-└── ...
-NOTE:
+checkpoints/  
+├── model_10000  
+│   ├── model_state.pdparams  
+│   ├── tokenizer_config.json  
+│   └── vocab.txt  
+└── ...  
+NOTE:  
 
 如需恢复模型训练，则可以设置init_from_ckpt， 如init_from_ckpt=checkpoints/model_100/model_state.pdparams。
 开始预测
