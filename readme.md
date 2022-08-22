@@ -1,11 +1,11 @@
-千言-问题匹配。任务旨在判断两个自然问句之间的语义是否相似
+# 千言-问题匹配
+任务旨在判断两个自然问句之间的语义是否相似
 
 比赛官网：https://aistudio.baidu.com/aistudio/competition/detail/130/0/submit-result，报名参加即可下载数据集
 
 原始代码github：https://github.com/PaddlePaddle/PaddleNLP/tree/develop/examples/text_matching/question_matching
 
-快速开始
-1. 主要运行环境
+## 1. 主要运行环境
 
 nvidia driver version 440.33.01
 
@@ -21,7 +21,7 @@ paddlenlp==2.2.5
 
 具体安装nccl教程请参考https://blog.csdn.net/Thanours/article/details/124078380?spm=1001.2014.3001.5501
 
-2. 代码结构说明
+## 2. 代码结构说明
 以下是本项目主要代码结构及说明：
 
 question_matching/
@@ -48,7 +48,8 @@ python -u -m paddle.distributed.launch --gpus "0,1,2,3" train.py \
        --train_batch_size 32 \
        --learning_rate 2E-5 \
        --rdrop_coef 0.0  
-可支持配置的参数：
+       
+**可支持配置的参数**：
 
 train_set: 训练集的文件。  
 dev_set：验证集数据文件。  
@@ -73,7 +74,7 @@ checkpoints/
 │   ├── tokenizer_config.json  
 │   └── vocab.txt  
 └── ...  
-NOTE:  
+**NOTE**:  
 
 如需恢复模型训练，则可以设置init_from_ckpt， 如init_from_ckpt=checkpoints/model_100/model_state.pdparams。  
 开始预测  
