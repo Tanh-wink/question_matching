@@ -81,11 +81,11 @@ checkpoints/
 训练完成后，在指定的 checkpoints 路径下会自动存储在验证集评估指标最高的模型，运行如下命令开始生成预测结果:  
 
 $ unset CUDA_VISIBLE_DEVICES
-python -u \
-    predict.py \
-    --device gpu \
-    --params_path "./checkpoints/model_10000/model_state.pdparams" \
-    --batch_size 128 \
-    --input_file "${test_set}" \
+python -u \\
+    predict.py \\
+    --device gpu \\
+    --params_path "./checkpoints/model_10000/model_state.pdparams" \\
+    --batch_size 128 \\
+    --input_file "${test_set}" \\
     --result_file "predict_result.csv"
 
