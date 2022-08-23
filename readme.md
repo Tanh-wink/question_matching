@@ -82,10 +82,10 @@ checkpoints/
 
 $ unset CUDA_VISIBLE_DEVICES
 python -u \\
-    predict.py \\
-    --device gpu \\
-    --params_path "./checkpoints/model_10000/model_state.pdparams" \\
-    --batch_size 128 \\
-    --input_file "${test_set}" \\
-    --result_file "predict_result.csv"
+    predict.py \\  
+    --device gpu \\  
+    --params_path "./checkpoints/model_10000/model_state.pdparams" \\  
+    --batch_size 128 \\  
+    --input_file "${test_set}" \\   
+    --result_file "predict_result.csv"  
 
